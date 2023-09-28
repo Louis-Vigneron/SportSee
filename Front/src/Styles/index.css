@@ -1,0 +1,78 @@
+body, html {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: #020203;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 35px;
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo__img {
+  background-color: #E60000;
+  border-radius: 100%;
+  width: 55px;
+  height: 55px;
+}
+.header__logo__name {
+  margin-left: 25px;
+  color: #E60000;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+}
+.header__nav__text {
+  color: #FFFFFF;
+}
+
+.navBar {
+  background-color: #020203;
+  width: 125px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.navBar__sport {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.navBar__sport__cat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.navBar__copy {
+  font-size: 16px;
+  transform: rotate(-90deg);
+  color: #FFFFFF;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  width: 200px;
+  margin-bottom: 50px;
+}/*# sourceMappingURL=index.css.map */
