@@ -1,38 +1,9 @@
-import {CartesianGrid, XAxis, YAxis, Tooltip, Bar, LineChart, Line, RadarChart, PolarGrid, PolarAngleAxis, Radar, PieChart, Pie, Cell, Label } from 'recharts'
+import {CartesianGrid, RadarChart, PolarGrid, PolarAngleAxis, Radar, PieChart, Pie, Cell, Label } from 'recharts'
 import BarChart from './BarChart/BarChart'
+import LineChart from './LineChart/LineChart'
 
 
-const data2 = [
 
-    {
-        day: 1,
-        sessionLength: 30
-    },
-    {
-        day: 2,
-        sessionLength: 23
-    },
-    {
-        day: 3,
-        sessionLength: 45
-    },
-    {
-        day: 4,
-        sessionLength: 50
-    },
-    {
-        day: 5,
-        sessionLength: 0
-    },
-    {
-        day: 6,
-        sessionLength: 0
-    },
-    {
-        day: 7,
-        sessionLength: 60
-    }
-]
 
 const data3 = [
 
@@ -74,50 +45,19 @@ const color = [
 ]
 export default function Main() {
 
-  
-    const CustomTooltip = ({ active, payload, label }) => {
-        if (active && payload && payload.length) {
-            if (payload.length > 1) {
-                return (
-                    <div className="custom-tooltip">
-                        <p className="label">{`${payload[0].value}kg`}</p>
-                        <p className="label">{`${payload[1].value}Kcal`}</p>
-                    </div>
-                );
-            } else {
-                return (
-                    <div className="custom-tooltip">
-                        <p className="label">{`${payload[0].value} min`}</p>
-                    </div>
-                );
-            }
-
-        }
-
-        return null;
-    };
-
-
 
     return (
         <div className="main">
             <h2>Bonjour <span>Gné</span></h2>
             <p>Félicitation ! Vous avez explosé vos objectif hier 👏</p>
-            <div>
+          
                 
-                <BarChart/>
-            </div>
+                <BarChart/>         
+                <LineChart/>
+           
+                
 
-            <div>
-                <LineChart width={730} height={250} data={data2} >
-                    <CartesianGrid vertical={false} horizontal={false} fill="#E60000" />
-                    <XAxis dataKey="day" />
-                    <YAxis domain={[-25]} hide />
-                    <Tooltip content={<CustomTooltip />} />
-                    <Line type="natural" dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} dot={false} />
-                </LineChart>
-
-            </div>
+          
 
             <div>
                 <RadarChart outerRadius={90} width={730} height={250} data={data3}>

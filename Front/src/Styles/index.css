@@ -125,4 +125,57 @@ body, html {
 }
 .barChart__info__color--kg {
   background-color: #282D30;
+}
+
+.lineChart {
+  width: 400px;
+  background-color: #FF0000;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.lineChart__label__time {
+  background-color: #FFFFFF;
+  padding: 10px;
+}
+.lineChart__title {
+  color: #FFFFFF;
+  opacity: 0.5;
+  font-size: 20px;
+  width: 180px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.lineChart__opacity {
+  position: absolute;
+  height: 100%;
+  width: 115px;
+  opacity: 0.1;
+  z-index: 0;
+  background-color: #000000;
+  right: 0;
+}
+.lineChart__chart {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lineChart__activeDot {
+  width: 5px;
+  height: 5px;
+  background-color: blue;
+  border-radius: 100%;
+}
+.lineChart__activeDot__circle {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 100%;
+  opacity: 0.5;
 }/*# sourceMappingURL=index.css.map */
