@@ -1,0 +1,26 @@
+.pieChart{
+    width: 400px;
+    height: 380px;
+    background-color: $color_whiteLigth;    
+    font-family: $font_roboto;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    &__text{
+        position: absolute;
+        top: 140px;
+        left: 150px;
+        text-align: center;       
+        width: 100px;
+        color: $color_grey;
+        &__big{
+            font-size: 26px;
+            color: $color_darkBlue;
+        }
+    }
+    &__title{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+}
