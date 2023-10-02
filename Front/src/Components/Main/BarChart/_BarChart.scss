@@ -1,7 +1,9 @@
 .barChart {
     background-color: $color_whiteLigth;
     padding: 25px;
-    width: 700px;
+    width: 750px;    
+    font-family: $font_roboto;
+    font-weight: 500;
     &__label {
         background-color: $color_red;
         padding: 5px 10px;
@@ -20,8 +22,6 @@
         align-items: center;
         justify-content: space-between;
         &__title {
-            font-weight: 500;
-            font-family: $font_roboto;
             font-size: 18px;
         }
 

@@ -61,7 +61,7 @@ export default function lineChart() {
                     <XAxis dataKey="day"
                         axisLine={false}
                         tickLine={false}
-                        tick={{ fill: '#FFFFFF' }}
+                        tick={{ fill: '#ffffff' }}
                         opacity={0.5}
                     />
                     <YAxis domain={[-10]} hide />

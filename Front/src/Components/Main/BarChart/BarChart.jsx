@@ -68,7 +68,7 @@ export default function barChart() {
                 </div>
 
             </div>
-            <BarChart width={700} height={250} data={data}>
+            <BarChart width={750} height={250} data={data}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis dataKey="day" tickLine={false} axisLine={{ stroke: '#DEDEDE' }} tick={{ fill: '#9B9EAC' }} />
                 <YAxis

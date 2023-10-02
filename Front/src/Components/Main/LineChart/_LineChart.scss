@@ -1,12 +1,12 @@
 .lineChart{
     width: 400px;
+    height: 380px;
     background-color: $color_red2;
     display: flex;
     flex-direction: column;
     font-family: $font_roboto;
     font-weight: 500;
     border-radius: 10px;
-    padding-bottom: 25px;
     position: relative;
     &__label{
         &__time{

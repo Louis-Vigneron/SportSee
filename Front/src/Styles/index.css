@@ -86,7 +86,9 @@ body, html {
 .barChart {
   background-color: #FBFBFB;
   padding: 25px;
-  width: 700px;
+  width: 750px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 .barChart__label {
   background-color: #E60000;
@@ -106,8 +108,6 @@ body, html {
   justify-content: space-between;
 }
 .barChart__info__title {
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
 .barChart__info__legend {
@@ -129,13 +129,13 @@ body, html {
 
 .lineChart {
   width: 400px;
+  height: 380px;
   background-color: #FF0000;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   border-radius: 10px;
-  padding-bottom: 25px;
   position: relative;
 }
 .lineChart__label__time {
@@ -178,4 +178,13 @@ body, html {
   background-color: black;
   border-radius: 100%;
   opacity: 0.5;
+}
+
+.radarChart {
+  width: 400px;
+  height: 380px;
+  background-color: #282D30;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: 10px;
 }/*# sourceMappingURL=index.css.map */
