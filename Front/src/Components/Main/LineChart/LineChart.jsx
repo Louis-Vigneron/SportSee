@@ -65,7 +65,7 @@ export default function lineChart() {
                         opacity={0.5}
                     />
                     <YAxis domain={[-10]} hide />
-                    <Tooltip content={<CustomTooltip />} />
+                    <Tooltip content={<CustomTooltip />} cursor={false}/>
                     <Line type="monotone" dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} dot={false} activeDot={{ r: 7, stroke: "rgba(255,255,255,0.2)", strokeWidth: 16 }} />
                 </LineChart>
             </div>

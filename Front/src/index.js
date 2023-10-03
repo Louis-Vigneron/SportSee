@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './Styles/normalize.css';
 import './Styles/index.css'
+import { fetchUserData } from './Service';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+fetchUserData(12)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
     <App />
   </React.StrictMode>
 );

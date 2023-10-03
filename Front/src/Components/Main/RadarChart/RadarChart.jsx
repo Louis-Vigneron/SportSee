@@ -37,7 +37,8 @@ export default function radarChart(){
                     <PolarGrid radialLines={false} stroke="#ffffff" />
                     <PolarAngleAxis dataKey="kind" stroke="#ffffff" tickLine={false} />
                     <Radar dataKey="value" fill="#E60000" fillOpacity={0.6} />
-                </RadarChart></ResponsiveContainer>
+                </RadarChart>
+            </ResponsiveContainer>
         </div>
     )
 }
