@@ -1,4 +1,4 @@
-import { CartesianGrid, XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts'
+import { XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts'
 const data2 = [
     {
         day: 1,
@@ -56,8 +56,8 @@ export default function lineChart() {
     return (
         <div className='lineChart'>
             <h3 className='lineChart__title'>Durée moyenne des sessions</h3>
-            <div className='lineChart__chart'>
-                <LineChart width={470} height={250} data={extendedData} >
+            <div className='lineChart__chart'> 
+                <LineChart width={354} height={175} data={extendedData} >
                     <XAxis dataKey="day"
                         axisLine={false}
                         tickLine={false}

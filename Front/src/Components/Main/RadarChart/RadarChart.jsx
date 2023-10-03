@@ -1,4 +1,4 @@
-import {RadarChart, PolarGrid, PolarAngleAxis, Radar} from 'recharts'
+import {ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, Radar} from 'recharts'
 
 const data3 = [
 
@@ -32,11 +32,12 @@ const data3 = [
 export default function radarChart(){
     return(
         <div className='radarChart'>
-            <RadarChart outerRadius={130} width={400} height={380} data={data3}>                    
+            <ResponsiveContainer width="100%" height="100%">
+            <RadarChart outerRadius={80} width={300} height={300} data={data3}>                    
                     <PolarGrid radialLines={false} stroke="#ffffff" />
                     <PolarAngleAxis dataKey="kind" stroke="#ffffff" tickLine={false} />
                     <Radar dataKey="value" fill="#E60000" fillOpacity={0.6} />
-                </RadarChart>
+                </RadarChart></ResponsiveContainer>
         </div>
     )
 }

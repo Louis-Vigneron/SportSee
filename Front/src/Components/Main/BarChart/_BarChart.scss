@@ -1,9 +1,11 @@
 .barChart {
-    background-color: $color_whiteLigth;
+    background-color: $color_whiteLight;
     padding: 25px;
-    width: 750px;    
+    width: 100%;    
+    height: 300px;
     font-family: $font_roboto;
     font-weight: 500;
+    margin-bottom: 50px;
     &__label {
         background-color: $color_red;
         padding: 5px 10px;

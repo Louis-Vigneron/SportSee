@@ -13,8 +13,8 @@ export default function pieChart() {
     return (
         <div className='pieChart'>
             <h3 className='pieChart__title'>Score</h3>
-            <PieChart width={400} height={380}>
-                <Pie data={data4} dataKey="todayScore" cx="50%" cy="50%" innerRadius={120} outerRadius={135} fill="#E60000" startAngle={180} endAngle={-180} cornerRadius={50}>
+            <PieChart width={300} height={300}>
+                <Pie data={data4} dataKey="todayScore" cx="50%" cy="50%" innerRadius={80} outerRadius={90} fill="#E60000" startAngle={180} endAngle={-180} cornerRadius={50}>
                     {
                         data4.map((entry, index) => (
 

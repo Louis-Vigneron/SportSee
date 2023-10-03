@@ -1,7 +1,7 @@
-import Yoga from '../../Assets/yoga.png';
-import Swim from '../../Assets/swim.png';
-import Bike from '../../Assets/bike.png';
-import Bodybuilding from '../../Assets/body.png';
+import Yoga from '../../../Assets/yoga.png';
+import Swim from '../../../Assets/swim.png';
+import Bike from '../../../Assets/bike.png';
+import Bodybuilding from '../../../Assets/body.png';
 
 export default function NavBar (){
     return(
