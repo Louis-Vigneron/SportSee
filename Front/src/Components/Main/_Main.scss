@@ -8,6 +8,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        margin-bottom: 25px;
        &__welcome{
          width: 90%;
          margin-top: 25px;
@@ -27,11 +28,14 @@
         
 
         &__charts{
-            width: 75%;
+            width: 70%;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            @media (max-width:1095px) {
+                justify-content: center;
+            }
         }
     }
 
@@ -40,20 +44,18 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-       
+        width: 25%;
         &__cat {
-            width: 200px;
-            height: 124px;
             background-color: $color_whiteLight;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 0 25px;
-
+            flex-wrap: wrap;
+            width: 50%;
+            padding: 25px;
             &__figure {
                 padding: 20px;
                 border-radius: 10px;
-
                 &--kCal {
                     background-color: rgba(255, 0, 0, 0.07);
                 }
