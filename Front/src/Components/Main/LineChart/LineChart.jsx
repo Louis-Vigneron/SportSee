@@ -1,47 +1,18 @@
 import { XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts'
-const data2 = [
-    {
-        day: 1,
-        sessionLength: 30
-    },
-    {
-        day: 2,
-        sessionLength: 23
-    },
-    {
-        day: 3,
-        sessionLength: 45
-    },
-    {
-        day: 4,
-        sessionLength: 50
-    },
-    {
-        day: 5,
-        sessionLength: 0
-    },
-    {
-        day: 6,
-        sessionLength: 0
-    },
-    {
-        day: 7,
-        sessionLength: 60
-    }
-]
-const extendedData = [
-    {
-        day: 0,
-        sessionLength: data2[0].sessionLength
-    },
-    ...data2,
-    {
-        day: 8,
-        sessionLength: data2[6].sessionLength + 10
-    },
-];
 
-export default function lineChart() {
+export default function lineChart(props) {
+    const data = props.timesSessions
+    const extendedData = [
+        {
+            day: 0,
+            sessionLength: data[0].sessionLength
+        },
+        ...data,
+        {
+            day: 8,
+            sessionLength: data[6].sessionLength
+        },
+    ];
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             return (
@@ -56,7 +27,7 @@ export default function lineChart() {
     return (
         <div className='lineChart'>
             <h3 className='lineChart__title'>Durée moyenne des sessions</h3>
-            <div className='lineChart__chart'> 
+            <div className='lineChart__chart'>
                 <LineChart width={354} height={175} data={extendedData} >
                     <XAxis dataKey="day"
                         axisLine={false}
@@ -64,8 +35,8 @@ export default function lineChart() {
                         tick={{ fill: '#ffffff' }}
                         opacity={0.5}
                     />
-                    <YAxis domain={[-10]} hide />
-                    <Tooltip content={<CustomTooltip />} cursor={false}/>
+                    <YAxis domain={[-5]} hide />
+                    <Tooltip content={<CustomTooltip />} cursor={false} />
                     <Line type="monotone" dataKey="sessionLength" stroke="#ffffff" strokeWidth={2} dot={false} activeDot={{ r: 7, stroke: "rgba(255,255,255,0.2)", strokeWidth: 16 }} />
                 </LineChart>
             </div>

@@ -3,36 +3,41 @@
     font-weight: 500;
     display: flex;
     flex-grow: 1;
+
     &__page {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         margin-bottom: 25px;
-       &__welcome{
-         width: 90%;
-         margin-top: 25px;
-        &__title {       
-            font-size: 38px;
-            margin: 0;
-            margin-bottom: 10px;
-            &__red {
-                color: $color_red2;
+
+        &__welcome {
+            width: 90%;
+            margin-top: 25px;
+
+            &__title {
+                font-size: 38px;
+                margin: 0;
+                margin-bottom: 10px;
+
+                &__red {
+                    color: $color_red2;
+                }
+            }
+
+            &__msg {
+                margin: 0;
             }
         }
 
-        &__msg {
-            margin: 0;
-        }
-       }
-        
 
-        &__charts{
+        &__charts {
             width: 70%;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+
             @media (max-width:1095px) {
                 justify-content: center;
             }
@@ -45,6 +50,7 @@
         justify-content: space-between;
         flex-direction: column;
         width: 25%;
+
         &__cat {
             background-color: $color_whiteLight;
             display: flex;
@@ -53,9 +59,11 @@
             flex-wrap: wrap;
             width: 50%;
             padding: 25px;
+
             &__figure {
                 padding: 20px;
                 border-radius: 10px;
+
                 &--kCal {
                     background-color: rgba(255, 0, 0, 0.07);
                 }
@@ -91,7 +99,7 @@
 
 }
 
-.NextToMain{
+.NextToMain {
     display: flex;
     justify-content: space-between;
     width: 90%;

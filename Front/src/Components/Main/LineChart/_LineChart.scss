@@ -1,4 +1,4 @@
-.lineChart{
+.lineChart {
     width: 300px;
     height: 300px;
     background-color: $color_red2;
@@ -7,15 +7,19 @@
     font-family: $font_roboto;
     font-weight: 500;
     border-radius: 10px;
-    position: relative;    
-    margin-bottom: 50px;
-    &__label{
-        &__time{
+    position: relative;
+    @media (max-width:1095px) {
+        margin-bottom: 50px;
+    }
+
+    &__label {
+        &__time {
             background-color: $color_white;
             padding: 10px;
         }
     }
-    &__title{
+
+    &__title {
         color: $color_white;
         opacity: 0.5;
         font-size: 20px;
@@ -23,28 +27,32 @@
         margin-left: 35px;
         margin-top: 35px;
     }
-    &__opacity{
+
+    &__opacity {
         position: absolute;
         height: 100%;
-        width: 115px;
+        width: 85px;
         opacity: 0.1;
         z-index: 0;
         background-color: $color_black2;
         right: 0;
     }
-    &__chart{
+
+    &__chart {
         z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
     }
-    &__activeDot{
+
+    &__activeDot {
         width: 5px;
         height: 5px;
         background-color: blue;
         border-radius: 100%;
-        &__circle{
+
+        &__circle {
             width: 10px;
             height: 10px;
             background-color: black;

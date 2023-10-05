@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -13,6 +14,37 @@ body, html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  background-color: #282D30;
+}
+.home__link {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 38px;
+  color: #E60000;
+  padding: 25px;
+  background-color: #FBFBFB;
+  border-radius: 25px;
+  width: 150px;
+  text-align: center;
+}
+
+.testInfo {
+  text-align: center;
+  border: 5px solid #282D30;
+  border-radius: 25px;
+  margin: 25px;
+  padding: 10px;
+  width: 25%;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 .header {
@@ -228,7 +260,11 @@ body, html {
   font-weight: 500;
   border-radius: 10px;
   position: relative;
-  margin-bottom: 50px;
+}
+@media (max-width: 1095px) {
+  .lineChart {
+    margin-bottom: 50px;
+  }
 }
 .lineChart__label__time {
   background-color: #FFFFFF;
@@ -245,7 +281,7 @@ body, html {
 .lineChart__opacity {
   position: absolute;
   height: 100%;
-  width: 115px;
+  width: 85px;
   opacity: 0.1;
   z-index: 0;
   background-color: #000000;
@@ -280,7 +316,11 @@ body, html {
   font-weight: 500;
   border-radius: 10px;
   font-size: 14px;
-  margin-bottom: 50px;
+}
+@media (max-width: 1095px) {
+  .radarChart {
+    margin-bottom: 50px;
+  }
 }
 
 .pieChart {
@@ -291,7 +331,11 @@ body, html {
   font-weight: 500;
   border-radius: 10px;
   position: relative;
-  margin-bottom: 50px;
+}
+@media (max-width: 1095px) {
+  .pieChart {
+    margin-bottom: 50px;
+  }
 }
 .pieChart__text {
   position: absolute;

@@ -1,22 +1,55 @@
-import NavBar from './NavBar/NavBar';
-import BarChart from './BarChart/BarChart'
-import LineChart from './LineChart/LineChart'
-import RadarChart from './RadarChart/RadarChart'
-import PieChart from './PieChart/PieChart'
+import BarChart from '../Components/Main/BarChart/BarChart'
+import LineChart from '../Components/Main/LineChart/LineChart'
+import RadarChart from '../Components/Main/RadarChart/RadarChart'
+import PieChart from '../Components/Main/PieChart/PieChart'
+import Header from '../Components/Header/Header'
 
-import flame from '../../Assets/flame.png'
-import chicken from '../../Assets/chicken.png'
-import apple from '../../Assets/apple.png'
-import burger from '../../Assets/cheeseburger.png'
+import flame from '../Assets/flame.png'
+import chicken from '../Assets/chicken.png'
+import apple from '../Assets/apple.png'
+import burger from '../Assets/cheeseburger.png'
 
-export default function Main(props) {
-    if (props.userData !== null) {
-        const user = props.userData.user[0]
-        return (
-            <div className="main">
-                <div className='main__navBar'>
-                    <NavBar />
-                </div>
+import { fetchDataMock } from '../Service/ServiceMock'
+
+function UserMock() {
+    fetchDataMock()
+    let user = fetchDataMock().user[0]
+    return (
+        <>
+            <Header />
+            <div className='main'>
+                <p className='testInfo'>
+                    User ID: {user.userId} <br />
+                    Prénom: {user.firstName}<br />
+                    Nom: {user.lastName}<br />
+                    Âge: {user.age}<br />
+                    Score aujourd'hui: {user.todayScore[0].value}%<br />
+                    Autre Score aujourd'hui: {user.todayScore[1].value}%<br />
+                    kCal: {user.keyData.kCal}<br />
+                    Protéines: {user.keyData.protein}<br />
+                    Glucides: {user.keyData.carbohydrate}<br />
+                    Lipides: {user.keyData.lipid}<br />
+                    Activité: <br />{user.activity.map((el) => (
+                        <span key={el.day}>
+                            Jour : {el.day} <br />
+                            Kg : {el.kilogram} <br />
+                            kCal: {el.calories}<br />
+                        </span>
+                    ))}<br />
+                    Sessions chronométrées: <br />{user.timesSessions.map((el) => (
+                        <span key={el.day + el.sessionLength}>
+                            Jour : {el.day}
+                            <br />
+                            Durée : {el.sessionLength}min <br />
+                        </span>
+                    ))}<br />
+                    Performance: <br />{user.performance.map((el) => (
+                        <span key={el.kind}>
+                            Valeur : {el.value} <br />
+                            Kind : {el.kind}<br />
+                        </span>
+                    ))}
+                </p>
                 <div className='main__page'>
                     <div className='main__page__welcome'>
                         <h2 className="main__page__welcome__title">Bonjour <span className="main__page__welcome__title__red">{user.firstName}</span></h2>
@@ -61,11 +94,10 @@ export default function Main(props) {
 
                         </div></div>
                 </div>
-
-
             </div>
-        )
-    }
-
-
+        </>
+    );
 }
+
+
+export default UserMock;
