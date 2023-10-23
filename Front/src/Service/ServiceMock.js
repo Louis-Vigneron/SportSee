@@ -143,12 +143,12 @@ export function fetchDataMock() {
     fetchDataMock.push(USER_ACTIVITY__MOCK)
     fetchDataMock.push(USER_AVERAGE_SESSIONS__MOCK)
     fetchDataMock.push(USER_PERFORMANCE__MOCK)
-    return sortData(fetchDataMock)
+    return sortDataMock(fetchDataMock)
 }
 
 
 
-function sortData(users) {
+function sortDataMock(users) {
     const day = ["L", "M", "M", "J", "V", "S", "D"]
     const user = [
         {
