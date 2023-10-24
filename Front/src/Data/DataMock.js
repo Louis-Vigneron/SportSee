@@ -1,4 +1,4 @@
-const USER_MAIN_DATA__MOCK = [
+export const USER_MAIN_DATA__MOCK = [
     {
         id: 'test',
         userInfos: {
@@ -16,7 +16,7 @@ const USER_MAIN_DATA__MOCK = [
     }
 ]
 
-const USER_ACTIVITY__MOCK = [
+export const USER_ACTIVITY__MOCK = [
     {
         userId: 'test',
         sessions: [
@@ -60,7 +60,7 @@ const USER_ACTIVITY__MOCK = [
 ]
 
 
-const USER_AVERAGE_SESSIONS__MOCK = [
+export const USER_AVERAGE_SESSIONS__MOCK = [
     {
         userId: 'test',
         sessions: [
@@ -97,7 +97,7 @@ const USER_AVERAGE_SESSIONS__MOCK = [
 ]
 
 
-const USER_PERFORMANCE__MOCK = [
+export const USER_PERFORMANCE__MOCK = [
     {
         userId: 'test',
         kind: {
@@ -137,56 +137,4 @@ const USER_PERFORMANCE__MOCK = [
     }
 ]
 
-export function fetchDataMock() {
-    let fetchDataMock = []
-    fetchDataMock.push(USER_MAIN_DATA__MOCK)
-    fetchDataMock.push(USER_ACTIVITY__MOCK)
-    fetchDataMock.push(USER_AVERAGE_SESSIONS__MOCK)
-    fetchDataMock.push(USER_PERFORMANCE__MOCK)
-    return sortDataMock(fetchDataMock)
-}
-
-
-
-function sortDataMock(users) {
-    const day = ["L", "M", "M", "J", "V", "S", "D"]
-    const user = [
-        {
-            userId: users[0][0].id,
-            firstName: users[0][0].userInfos.firstName,
-            lastName: users[0][0].userInfos.lastName,
-            age: users[0][0].userInfos.age,
-            todayScore: [
-                { value: users[0][0].score * 100 || users[0][0].todayScore * 100 },
-                { value: (1 - users[0][0].score) * 100 || (1 - users[0][0].todayScore) * 100 }
-            ],
-            keyData: {
-                kCal: users[0][0].keyData.calorieCount,
-                protein: users[0][0].keyData.proteinCount,
-                carbohydrate: users[0][0].keyData.carbohydrateCount,
-                lipid: users[0][0].keyData.lipidCount
-            },
-            activity: users[1][0].sessions,
-            timesSessions: users[2][0].sessions,
-            performance: users[3][0].data
-        }
-    ];
-    let i = 0
-    day.forEach(el => {
-        user[0].timesSessions[i].day = el
-        i++
-    })
-
-    const kind = users[3][0].kind;
-    let x = 1
-    user[0].performance.forEach(el => {
-        el.kind = kind[x]
-        x++
-    })
-
-
-
-    return { user, kind };
-}
-
-
+ 

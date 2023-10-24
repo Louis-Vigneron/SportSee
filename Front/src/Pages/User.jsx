@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 function User() {
   const userId = useParams();
   const [userData, setUserData] = useState(null);
-
   useEffect(() => {
     async function fetchData() {
       try {
@@ -20,10 +19,17 @@ function User() {
     fetchData();
   }, [userId.id]);
 
+  let navId = ''
+  if (userId.id === '18') {
+    navId = 12
+  } else {
+    navId = 18
+  }
+   
   return (
     <>
-      <Header />
-      <Main userData={userData} />
+      <Header props={navId} />
+      <Main userData={userData} />      
     </>
   );
 }

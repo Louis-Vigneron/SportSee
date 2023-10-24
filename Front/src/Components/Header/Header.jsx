@@ -1,11 +1,11 @@
 import Logo from '../../Assets/logo.png';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header(props) {
     return (
         <div className='header'>
             <div className='header__logo'>
-                <Link to={'/'}>
+                <Link to={`/user/${props.props}`}>
                     <div className='header__logo__img'>
                         <img
                             src={Logo}

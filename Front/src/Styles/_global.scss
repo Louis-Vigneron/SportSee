@@ -17,27 +17,55 @@ html {
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     height: 100%;
-    background-color: $color_darkBlue;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: $font_roboto;
+    &__logo {
 
-    &__link {
-        font-family: $font_roboto;
-        text-decoration: none;
-        font-size: 38px;
-        color: $color_red;
-        padding: 25px;
-        background-color: $color_whiteLight;
-        border-radius: 25px;
+        background-color: $color_red;
+        border-radius: 100%;
         width: 150px;
-        text-align: center;
+        height: 150px;
+
+        &__img {
+            width: 150px;
+            height: 150px;
+        }
     }
+
+    &__box {
+        &__title{
+            margin: 50px;
+            text-align: center;
+            font-size: 50px;
+        }
+        &__link {           
+            text-decoration: none;
+            font-size: 38px;
+            color: $color_red;
+            padding: 25px;
+            background-color: $color_black;
+            border-radius: 25px;
+            width: 150px;
+            text-align: center;
+            margin: 10px;
+            transition: 0.5s;
+            &:hover{
+                color: $color_whiteLight;
+                background-color:  $color_grey;
+            }
+
+        }
+
+    }
+
 }
 
-.testInfo{
+.testInfo {
     text-align: center;
     border: 5px solid $color_darkBlue;
     border-radius: 25px;

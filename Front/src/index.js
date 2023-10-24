@@ -4,7 +4,6 @@ import './Styles/normalize.css';
 import './Styles/index.css';
 import Home from './Pages/Home';
 import User from './Pages/User';
-import UserMock from './Pages/UserMock';
 import reportWebVitals from './reportWebVitals';
 
 import {
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  {
-    path: "/user/test",
-    element: <UserMock />,
-  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
